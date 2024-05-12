@@ -5,3 +5,8 @@ struct user {
     char password[16]{};
     bool isAdmin = false;
 };
+
+struct usersList {
+    user* usersList = new user[]{};
+    unsigned usersNumber{};
+};

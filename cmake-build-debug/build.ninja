@@ -49,20 +49,32 @@ cmake_ninja_workdir = /home/blaadick/Documents/CLionProjects/Coursework/cmake-bu
 
 build cmake_object_order_depends_target_Coursework: phony || CMakeFiles/Coursework.dir
 
-build CMakeFiles/Coursework.dir/main.cpp.o: CXX_COMPILER__Coursework_unscanned_Debug /home/blaadick/Documents/CLionProjects/Coursework/main.cpp || cmake_object_order_depends_target_Coursework
-  DEP_FILE = CMakeFiles/Coursework.dir/main.cpp.o.d
+build CMakeFiles/Coursework.dir/Main.cpp.o: CXX_COMPILER__Coursework_unscanned_Debug /home/blaadick/Documents/CLionProjects/Coursework/Main.cpp || cmake_object_order_depends_target_Coursework
+  DEP_FILE = CMakeFiles/Coursework.dir/Main.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Coursework.dir
   OBJECT_FILE_DIR = CMakeFiles/Coursework.dir
 
-build CMakeFiles/Coursework.dir/login.cpp.o: CXX_COMPILER__Coursework_unscanned_Debug /home/blaadick/Documents/CLionProjects/Coursework/login.cpp || cmake_object_order_depends_target_Coursework
-  DEP_FILE = CMakeFiles/Coursework.dir/login.cpp.o.d
+build CMakeFiles/Coursework.dir/Login.cpp.o: CXX_COMPILER__Coursework_unscanned_Debug /home/blaadick/Documents/CLionProjects/Coursework/Login.cpp || cmake_object_order_depends_target_Coursework
+  DEP_FILE = CMakeFiles/Coursework.dir/Login.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Coursework.dir
   OBJECT_FILE_DIR = CMakeFiles/Coursework.dir
 
-build CMakeFiles/Coursework.dir/loader.cpp.o: CXX_COMPILER__Coursework_unscanned_Debug /home/blaadick/Documents/CLionProjects/Coursework/loader.cpp || cmake_object_order_depends_target_Coursework
-  DEP_FILE = CMakeFiles/Coursework.dir/loader.cpp.o.d
+build CMakeFiles/Coursework.dir/Loader.cpp.o: CXX_COMPILER__Coursework_unscanned_Debug /home/blaadick/Documents/CLionProjects/Coursework/Loader.cpp || cmake_object_order_depends_target_Coursework
+  DEP_FILE = CMakeFiles/Coursework.dir/Loader.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Coursework.dir
+  OBJECT_FILE_DIR = CMakeFiles/Coursework.dir
+
+build CMakeFiles/Coursework.dir/SwitchModule.cpp.o: CXX_COMPILER__Coursework_unscanned_Debug /home/blaadick/Documents/CLionProjects/Coursework/SwitchModule.cpp || cmake_object_order_depends_target_Coursework
+  DEP_FILE = CMakeFiles/Coursework.dir/SwitchModule.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Coursework.dir
+  OBJECT_FILE_DIR = CMakeFiles/Coursework.dir
+
+build CMakeFiles/Coursework.dir/Utils.cpp.o: CXX_COMPILER__Coursework_unscanned_Debug /home/blaadick/Documents/CLionProjects/Coursework/Utils.cpp || cmake_object_order_depends_target_Coursework
+  DEP_FILE = CMakeFiles/Coursework.dir/Utils.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Coursework.dir
   OBJECT_FILE_DIR = CMakeFiles/Coursework.dir
@@ -75,7 +87,7 @@ build CMakeFiles/Coursework.dir/loader.cpp.o: CXX_COMPILER__Coursework_unscanned
 #############################################
 # Link the executable Coursework
 
-build Coursework: CXX_EXECUTABLE_LINKER__Coursework_Debug CMakeFiles/Coursework.dir/main.cpp.o CMakeFiles/Coursework.dir/login.cpp.o CMakeFiles/Coursework.dir/loader.cpp.o
+build Coursework: CXX_EXECUTABLE_LINKER__Coursework_Debug CMakeFiles/Coursework.dir/Main.cpp.o CMakeFiles/Coursework.dir/Login.cpp.o CMakeFiles/Coursework.dir/Loader.cpp.o CMakeFiles/Coursework.dir/SwitchModule.cpp.o CMakeFiles/Coursework.dir/Utils.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/Coursework.dir
   POST_BUILD = :

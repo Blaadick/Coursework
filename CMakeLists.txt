@@ -3,10 +3,14 @@ project(Coursework)
 
 set(CMAKE_CXX_STANDARD 26)
 
-add_executable(Coursework main.cpp
+add_executable(Coursework Main.cpp
     structs/user.h
-    login.cpp
-    login.h
-    loader.cpp
-    loader.h
+    Login.cpp
+    Login.h
+    Loader.cpp
+    Loader.h
+    SwitchModule.cpp
+    SwitchModule.h
+    Utils.cpp
+    Utils.h
 )
