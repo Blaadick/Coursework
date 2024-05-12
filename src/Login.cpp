@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstring>
-#include "Login.h"
 #include "structs/user.h"
+#include "Login.h"
 #include "Utils.h"
 
 void Login(usersList& users) {

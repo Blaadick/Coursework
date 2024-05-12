@@ -1,6 +1,6 @@
 #include <iostream>
-#include "SwitchModule.h"
 #include "structs/user.h"
+#include "SwitchModule.h"
 #include "Utils.h"
 
 void SwitchModule(user currentUser) {

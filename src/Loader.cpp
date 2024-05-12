@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Loader.h"
 #include "structs/user.h"
+#include "Loader.h"
 
 usersList LoadUsers() {
     //TODO Fix out of file bug
