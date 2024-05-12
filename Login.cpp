@@ -4,7 +4,7 @@
 #include "structs/user.h"
 #include "Utils.h"
 
-void Login(usersList users) {
+void Login(usersList& users) {
     FILE* usersFile = fopen("users.bin", "rb");
     user newUser;
     
@@ -18,9 +18,11 @@ void Login(usersList users) {
             std::cout << "Password: ";
             std::cin >> newUser.password;
             
-            for(int i = 0; i < users.usersNumber; ++i) {
+            for(unsigned int i = 0; i < users.usersNumber; ++i) {
                 if(strcmp(newUser.login, users.usersList[i].login) != 0) continue;
                 if(strcmp(newUser.password, users.usersList[i].password) != 0) continue;
+                
+                users.currentUserID = i;
                 
                 ClearConsole();
                 return;

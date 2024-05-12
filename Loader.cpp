@@ -3,6 +3,7 @@
 #include "structs/user.h"
 
 usersList LoadUsers() {
+    //TODO Fix out of file bug
     FILE* usersFile = fopen("users.bin", "rb");
     usersList loadingUsers;
     

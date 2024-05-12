@@ -3,10 +3,11 @@
 struct user {
     char login[16]{};
     char password[16]{};
-    bool isAdmin = false;
+    bool isAdmin{};
 };
 
 struct usersList {
     user* usersList = new user[]{};
-    unsigned usersNumber{};
+    unsigned int usersNumber{};
+    unsigned int currentUserID{};
 };

@@ -8,5 +8,5 @@ usersList users = LoadUsers();
 int main() {
     Login(users);
     
-    SwitchModule();
+    SwitchModule(users.usersList[users.currentUserID]);
 }
