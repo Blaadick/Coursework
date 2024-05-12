@@ -1,3 +1,0 @@
-/home/blaadick/Documents/CLionProjects/Coursework/cmake-build-debug/CMakeFiles/Coursework.dir
-/home/blaadick/Documents/CLionProjects/Coursework/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/blaadick/Documents/CLionProjects/Coursework/cmake-build-debug/CMakeFiles/rebuild_cache.dir
