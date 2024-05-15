@@ -1,14 +1,17 @@
 #include <iostream>
 #include <cstring>
-#include "structs/user.h"
 #include "Login.h"
 #include "Utils.h"
+#include "Loader.h"
+#include "modules/Users.h"
 
 void Login(usersList& users) {
     FILE* usersFile = fopen("users.bin", "rb");
     user newUser;
     
-    if(usersFile != nullptr) {
+    fseek(usersFile, 0, SEEK_END);
+    
+    if(ftell(usersFile) > 0) {
         while(true) {
             std::cout << "Login on to user" << std::endl;
             
@@ -18,7 +21,7 @@ void Login(usersList& users) {
             std::cout << "Password: ";
             std::cin >> newUser.password;
             
-            for(unsigned int i = 0; i < users.usersNumber; ++i) {
+            for(int i = 0; i < users.usersNumber; ++i) {
                 if(strcmp(newUser.login, users.usersList[i].login) != 0) continue;
                 if(strcmp(newUser.password, users.usersList[i].password) != 0) continue;
                 
@@ -41,7 +44,11 @@ void Login(usersList& users) {
         
         newUser.isAdmin = true;
         
-        //TODO Create new user
+        users.currentUserID = (unsigned)0;
+        
+        AddUser(users, newUser);
+        
+        ClearConsole();
     }
     
     fclose(usersFile);

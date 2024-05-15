@@ -2,7 +2,7 @@
 #include "Utils.h"
 
 /**
- * Executes the console cleanup command depending on the system type
+ * Executes the console cleanup command.
  */
 void ClearConsole() {
     system("clear");

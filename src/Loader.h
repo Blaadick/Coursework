@@ -1,4 +1,5 @@
 #include "structs/user.h"
+#include "structs/athlete.h"
 
 usersList LoadUsers();
-void saveUsers(usersList savingUsers);
+athletesList LoadAthletes();
