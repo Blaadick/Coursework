@@ -9,15 +9,19 @@ add_executable(Coursework src/Main.cpp
     src/Login.h
     src/Loader.cpp
     src/Loader.h
-        src/modules/SwitchModule.cpp
-        src/modules/SwitchModule.h
+    src/modules/SwitchModule.cpp
+    src/modules/SwitchModule.h
     src/Utils.cpp
     src/Utils.h
-        src/structs/athlete.h
-        src/modules/Users.cpp
-        src/modules/Users.h
-        src/modules/Athletes.cpp
-        src/modules/Athletes.h
-        src/modules/Sorting.cpp
-        src/modules/Sorting.h
+    src/structs/athlete.h
+    src/modules/Users.cpp
+    src/modules/Users.h
+    src/modules/Athletes.cpp
+    src/modules/Athletes.h
+    src/modules/Sorting.cpp
+    src/modules/Sorting.h
+    src/modules/Searching.cpp
+    src/modules/Searching.h
+    src/modules/Calculations.cpp
+    src/modules/Calculations.h
 )

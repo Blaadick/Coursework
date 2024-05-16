@@ -1,3 +1,5 @@
 #include "../structs/athlete.h"
 
-void SelectSortingMethod(athletesList athletes);
+void ResultSort(athletesList& athletes);
+void LastnameSort(athletesList& athletes);
+void CountrySort(athletesList& athletes);

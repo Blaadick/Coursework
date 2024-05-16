@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cstring>
 #include "Athletes.h"
 #include "../Loader.h"
 #include "../Utils.h"
@@ -37,6 +36,11 @@ void CreateAthlete(athletesList& athletes) {
         throw std::invalid_argument("Illegal argument!");
     }
     
+    std::cout << "Birth year: ";
+    if(!(std::cin >> newAthlete.birthYear)) {
+        throw std::invalid_argument("Illegal argument!");
+    }
+    
     std::cout << "Trainer: ";
     std::cin >> newAthlete.trainer;
     
@@ -51,61 +55,29 @@ void CreateAthlete(athletesList& athletes) {
 void ShowAthletes(athletesList athletesToShow) {
     char input;
     
-    std::cout << "├──────────────────┼─────┼─────┼─────┼──────────────────┼──────────────────┤" << std::endl;
+    std::cout << "┌──────────────────┬────────┬────────┬────────┬────────────┬──────────────────┬──────────────────┐" << std::endl;
+    std::cout << "│ Athlete lastname │ Result │ Height │ Weight │ Birth year │ Trainer lastname │ Country          │" << std::endl;
+    std::cout << "╞══════════════════╪════════╪════════╪════════╪════════════╪══════════════════╪══════════════════╡" << std::endl;
     
     for(int i = 0; i < athletesToShow.athletesNumber; ++i) {
         athlete athlete = athletesToShow.athletesList[i];
         
-        printf("│ %-16s │ %-3i │ %-3i │ %-3i │ %-16s │ %-16s │\n",
+        printf("│ %-16s │ %-6i │ %-6i │ %-6i │ %-10i │ %-16s │ %-16s │\n",
                athlete.lastname,
                athlete.result,
                athlete.height,
                athlete.weight,
+               athlete.birthYear,
                athlete.trainer,
                athlete.country
         );
         
-        std::cout << "├──────────────────┼─────┼─────┼─────┼──────────────────┼──────────────────┤" << std::endl;
-    }
-    
-    std::cout << std::endl << "any - Return" << std::endl;
-    std::cin >> input;
-    
-    ClearConsole();
-}
-
-void SearchAthlete(athletesList athletes) {
-    char lastnameWanted[16];
-    bool athleteFound = false;
-    char input;
-    
-    std::cout << "Search athlete by last name" << std::endl;
-    
-    std::cout << "Enter lastname: ";
-    std::cin >> lastnameWanted;
-    
-    for(int i = 0; i < athletes.athletesNumber; ++i) {
-        athlete athlete = athletes.athletesList[i];
-        
-        if(std::strcmp(athlete.lastname, lastnameWanted) == 0) {
-            athleteFound = true;
-            
-            std::cout << "├──────────────────┼─────┼─────┼─────┼──────────────────┼──────────────────┤" << std::endl;
-            
-            printf("│ %-16s │ %-3i │ %-3i │ %-3i │ %-16s │ %-16s │\n",
-                   athlete.lastname,
-                   athlete.result,
-                   athlete.height,
-                   athlete.weight,
-                   athlete.trainer,
-                   athlete.country
-            );
-            
-            std::cout << "├──────────────────┼─────┼─────┼─────┼──────────────────┼──────────────────┤" << std::endl;
+        if(i == athletesToShow.athletesNumber - 1) {
+            std::cout << "└──────────────────┴────────┴────────┴────────┴────────────┴──────────────────┴──────────────────┘" << std::endl;
+        } else {
+            std::cout << "├──────────────────┼────────┼────────┼────────┼────────────┼──────────────────┼──────────────────┤" << std::endl;
         }
     }
-    
-    if(!athleteFound) std::cout << "No athletes found :(" << std::endl;
     
     std::cout << std::endl << "any - Return" << std::endl;
     std::cin >> input;

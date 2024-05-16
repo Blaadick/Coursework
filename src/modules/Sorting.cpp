@@ -38,30 +38,3 @@ void CountrySort(athletesList& athletes) {
     
     ShowAthletes(athletes);
 }
-
-void SelectSortingMethod(athletesList athletes) {
-    char input;
-    
-    std::cout << "1 - Sorting by result" << std::endl;
-    std::cout << "2 - Sorting by lastname" << std::endl;
-    std::cout << "3 - Sorting by country" << std::endl;
-    std::cout << "any - Return" << std::endl;
-    
-    std::cin >> input;
-    ClearConsole();
-    
-    switch(input) {
-        case '1':
-            ResultSort(athletes);
-            break;
-        case '2':
-            LastnameSort(athletes);
-            break;
-        case '3':
-            CountrySort(athletes);
-            break;
-        default:
-            ClearConsole();
-            return;
-    }
-}

@@ -43,11 +43,19 @@ void CreateUser(usersList& users) {
 void ShowUsers(usersList usersToShow) {
     char input;
     
-    std::cout << "├──────────────────┼───┤" << std::endl;
+    std::cout << "┌──────────────────┬───────────┐" << std::endl;
+    std::cout << "│ Username         │ Is admin? │" << std::endl;
+    std::cout << "╞══════════════════╪═══════════╡" << std::endl;
+    
     
     for(int i = 0; i < usersToShow.usersNumber; ++i) {
-        printf("│ %-16s │ %b │\n", usersToShow.usersList[i].login, usersToShow.usersList[i].isAdmin);
-        std::cout << "├──────────────────┼───┤" << std::endl;
+        printf("│ %-16s │ %-9b │\n", usersToShow.usersList[i].login, usersToShow.usersList[i].isAdmin);
+        
+        if(i == usersToShow.usersNumber - 1) {
+            std::cout << "└──────────────────┴───────────┘" << std::endl;
+        } else {
+            std::cout << "├──────────────────┼───────────┤" << std::endl;
+        }
     }
     
     std::cout << std::endl << "any - Return" << std::endl;
