@@ -1,7 +1,7 @@
 #include <iostream>
-#include "Loader.h"
-#include "Login.h"
-#include "modules/SwitchModule.h"
+#include "../include/Loader.h"
+#include "../include/Login.h"
+#include "../include/modules/SwitchModule.h"
 
 usersList users = LoadUsers();
 athletesList athletes = LoadAthletes();

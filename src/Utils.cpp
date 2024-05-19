@@ -1,9 +1,15 @@
 #include <iostream>
-#include "Utils.h"
+#include "../include/Utils.h"
 
-/**
- * Executes the console cleanup command.
- */
+void ConfirmExit() {
+    char input;
+    
+    std::cout << std::endl << "any - Return" << std::endl;
+    std::cin >> input;
+    
+    ClearConsole();
+}
+
 void ClearConsole() {
     system("clear");
 }

@@ -1,12 +1,7 @@
 #include <iostream>
-#include "Loader.h"
+#include "../include/structs/user.h"
+#include "../include/structs/athlete.h"
 
-/**
- * Loads users from "users.bin" file.
- * If file does not exist, creates it.
- *
- * @return usersList
- */
 usersList LoadUsers() {
     FILE* usersFile = fopen("users.bin", "rb");
     if(usersFile == nullptr) {
@@ -30,12 +25,6 @@ usersList LoadUsers() {
     return loadingUsers;
 }
 
-/**
- * Loads athletes from "athlete.bin" file.
- * If file does not exist, creates it.
- *
- * @return athletesList
- */
 athletesList LoadAthletes() {
     FILE* athletesFile = fopen("athletes.bin", "rb");
     if(athletesFile == nullptr) {

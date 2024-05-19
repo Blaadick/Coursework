@@ -4,24 +4,24 @@ project(Coursework)
 set(CMAKE_CXX_STANDARD 26)
 
 add_executable(Coursework src/Main.cpp
-    src/structs/user.h
+    include/structs/user.h
     src/Login.cpp
-    src/Login.h
+    include/Login.h
     src/Loader.cpp
-    src/Loader.h
+    include/Loader.h
     src/modules/SwitchModule.cpp
-    src/modules/SwitchModule.h
+    include/modules/SwitchModule.h
     src/Utils.cpp
-    src/Utils.h
-    src/structs/athlete.h
-    src/modules/Users.cpp
-    src/modules/Users.h
-    src/modules/Athletes.cpp
-    src/modules/Athletes.h
+    include/Utils.h
+    include/structs/athlete.h
+    src/modules/UsersActions.cpp
+    include/modules/UsersActions.h
+    src/modules/AthletesActions.cpp
+    include/modules/AthletesActions.h
     src/modules/Sorting.cpp
-    src/modules/Sorting.h
+    include/modules/Sorting.h
     src/modules/Searching.cpp
-    src/modules/Searching.h
+    include/modules/Searching.h
     src/modules/Calculations.cpp
-    src/modules/Calculations.h
+    include/modules/Calculations.h
 )

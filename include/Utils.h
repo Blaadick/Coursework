@@ -1,1 +1,2 @@
+void ConfirmExit();
 void ClearConsole();

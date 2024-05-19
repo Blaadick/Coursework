@@ -1,13 +1,13 @@
 #include <iostream>
 #include <cstring>
-#include "Calculations.h"
-#include "../Utils.h"
+#include "../../include/structs/athlete.h"
+#include "../../include/Utils.h"
 
 void AverageWeightAndHeight(athletesList athletes) {
     char wantedCountry[16];
+    int athletesInCountry = 0;
     int allWeights = 0;
     int allHeights = 0;
-    char input;
     
     std::cout << "Enter country: ";
     std::cin >> wantedCountry;
@@ -16,15 +16,13 @@ void AverageWeightAndHeight(athletesList athletes) {
         athlete athlete = athletes.athletesList[i];
         
         if(std::strcmp(athlete.country, wantedCountry) != 0) continue;
-        
+        athletesInCountry++;
         allWeights += athlete.weight;
         allHeights += athlete.height;
     }
     
-    std::cout << "AverageWeight: " << allWeights / (int)athletes.athletesNumber << std::endl;
-    std::cout << "AverageHeight: " << allHeights / (int)athletes.athletesNumber << std::endl;
+    std::cout << "AverageWeight: " << allWeights / athletesInCountry << std::endl;
+    std::cout << "AverageHeight: " << allHeights / athletesInCountry << std::endl;
     
-    std::cout << std::endl << "any - Return" << std::endl;
-    std::cin >> input;
-    ClearConsole();
+    ConfirmExit();
 }

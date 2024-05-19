@@ -1,12 +1,11 @@
 #include <iostream>
 #include <cstring>
-#include "Searching.h"
-#include "../Utils.h"
+#include "../../include/structs/athlete.h"
+#include "../../include/Utils.h"
 
 void LastnameSearch(athletesList athletes) {
     char lastnameWanted[16];
     bool athleteFound = false;
-    char input;
     
     std::cout << "Search athlete by last name" << std::endl;
     
@@ -42,16 +41,12 @@ void LastnameSearch(athletesList athletes) {
         std::cout << "No athletes found :(" << std::endl;
     }
     
-    std::cout << std::endl << "any - Return" << std::endl;
-    std::cin >> input;
-    
-    ClearConsole();
+    ConfirmExit();
 }
 
 void BirthYearSearch(athletesList athletes) {
     int birthYearWanted;
     bool athleteFound = false;
-    char input;
     
     std::cout << "Search athlete by birth year" << std::endl;
     
@@ -90,16 +85,12 @@ void BirthYearSearch(athletesList athletes) {
         std::cout << "No athletes found :(" << std::endl;
     }
     
-    std::cout << std::endl << "any - Return" << std::endl;
-    std::cin >> input;
-    
-    ClearConsole();
+    ConfirmExit();
 }
 
 void TrainerSearch(athletesList athletes) {
     char trainerWanted[16];
     bool athleteFound = false;
-    char input;
     
     std::cout << "Search athlete by trainer" << std::endl;
     
@@ -135,16 +126,12 @@ void TrainerSearch(athletesList athletes) {
         std::cout << "No athletes found :(" << std::endl;
     }
     
-    std::cout << std::endl << "any - Return" << std::endl;
-    std::cin >> input;
-    
-    ClearConsole();
+    ConfirmExit();
 }
 
 void CountrySearch(athletesList athletes) {
     char countryWanted[16];
     bool athleteFound = false;
-    char input;
     
     std::cout << "Search athlete by country" << std::endl;
     
@@ -180,16 +167,12 @@ void CountrySearch(athletesList athletes) {
         std::cout << "No athletes found :(" << std::endl;
     }
     
-    std::cout << std::endl << "any - Return" << std::endl;
-    std::cin >> input;
-    
-    ClearConsole();
+    ConfirmExit();
 }
 
 void CountryBestSearch(athletesList athletes) {
     char countryWanted[16];
     athlete athleteLookingFor;
-    char input;
     
     std::cout << "Search best athlete by country" << std::endl;
     
@@ -225,16 +208,12 @@ void CountryBestSearch(athletesList athletes) {
         std::cout << "└──────────────────┴────────┴────────┴────────┴────────────┴──────────────────┴──────────────────┘"<< std::endl;
     }
     
-    std::cout << std::endl << "any - Return" << std::endl;
-    std::cin >> input;
-    
-    ClearConsole();
+    ConfirmExit();
 }
 
 void BirthYearBestSearch(athletesList athletes) {
     athlete athleteLookingFor;
     int athleteAgeWanted;
-    char input;
     time_t time = std::time(nullptr);
     int currentYear = localtime(&time)->tm_year + 1900;
     
@@ -276,15 +255,12 @@ void BirthYearBestSearch(athletesList athletes) {
         std::cout << "└──────────────────┴────────┴────────┴────────┴────────────┴──────────────────┴──────────────────┘"<< std::endl;
     }
     
-    std::cout << std::endl << "any - Return" << std::endl;
-    std::cin >> input;
-    
-    ClearConsole();
+    ConfirmExit();
 }
 
 void TrainersByCountrySearch(athletesList athletes) {
     char countryWanted[16];
-    char input;
+    bool trainerFound = false;
     
     std::cout << "Search all trainers by country" << std::endl;
     
@@ -297,13 +273,19 @@ void TrainersByCountrySearch(athletesList athletes) {
         athlete athlete = athletes.athletesList[i];
         
         if(strcmp(athlete.country, countryWanted) == 0) {
+            trainerFound = true;
+            
             printf("│ %-16s │\n", athlete.trainer);
             
             std::cout << "├──────────────────┤" << std::endl;
         }
     }
-    std::cout << std::endl << "any - Return" << std::endl;
-    std::cin >> input;
     
-    ClearConsole();
+    if(!trainerFound) {
+        std::cout << "└──────────────────┘" << std::endl;
+        
+        std::cout << std::endl << "There are no trainers of such a country" << std::endl;
+    }
+    
+    ConfirmExit();
 }

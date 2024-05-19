@@ -1,9 +1,8 @@
 #include <iostream>
 #include <cstring>
-#include "Login.h"
-#include "Utils.h"
-#include "Loader.h"
-#include "modules/Users.h"
+#include "../include/structs/user.h"
+#include "../include/Utils.h"
+#include "../include/modules/UsersActions.h"
 
 void Login(usersList& users) {
     FILE* usersFile = fopen("users.bin", "rb");

@@ -1,7 +1,6 @@
 #include <iostream>
-#include "../Utils.h"
-#include "../structs/athlete.h"
-#include "Athletes.h"
+#include "../../include/structs/athlete.h"
+#include "../../include/modules/AthletesActions.h"
 
 void ResultSort(athletesList& athletes) {
     for(unsigned i = 0; i < athletes.athletesNumber; ++i) {
